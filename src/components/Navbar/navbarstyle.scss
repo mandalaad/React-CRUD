@@ -1,0 +1,44 @@
+.custom-navbar {
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .2);
+    width: 92%;
+    margin: auto;
+    height: 70px;
+    margin-top: 20px;
+    border-radius: 20px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between !important;
+    box-sizing: border-box;
+    .left-side {
+        margin-left: 20px;
+        display: flex;
+        box-sizing: border-box;
+        .logo {
+            width: 200px;
+        }
+        h3 {
+            color: orange;
+            margin-top: 20px;
+            margin-left: 10px;
+            font-weight: 700;
+            box-sizing: border-box;
+        }
+    }
+    .right-side {
+        margin-right: 10px;
+        height: 55px;
+        padding: 5px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        .dropdown {
+            .dropdown-toggle {
+                display: flex;
+                background-color: white;
+                color: orange;
+                border: none;
+                align-items: center;
+            }
+        }
+    }
+}

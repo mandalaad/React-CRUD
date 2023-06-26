@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,39 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
+
+.content {
+  position: relative;
+  background: white;
+  height: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  padding-bottom: 35px;
+  .wrap {
+    box-shadow: 5px 4px 7px 1px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    width: 92%;
+    min-height: 80vh;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+}
+.sidebar.open ~ .content{
+    left: 250px;
+    width: calc(100% - 250px);
+  }

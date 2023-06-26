@@ -1,0 +1,67 @@
+.tabel-income-admin {
+    background-color: white;
+    height: auto;
+    margin-top: 10px;
+    padding: 30px 50px 20px 40px;
+    .card-body {
+        margin-left: 200px;
+        .table-responsive {
+            margin-top: 30px;
+        }
+    }
+    .buton {
+        display: flex;
+        justify-content: start;
+        margin-bottom: 20px;
+        gap: 20px;
+        button {
+            width: 150px;
+            height: 35x;
+            border-radius: 20px;
+        }
+    }
+    .buton-fungsi {
+        width: 70px;
+        margin-right: 20px;
+        box-sizing: border-box;
+    }
+}
+
+.modal {
+    .field {
+        display: flex;
+        justify-content: space-between;
+        p {
+            line-height: 40px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        input,
+        select {
+            height: 40px;
+            width: 250px;
+            padding-left: 10px;
+            border-radius: 10px;
+        }
+    }
+    .buton {
+        justify-content: end;
+        display: flex;
+        button {
+            width: 150px;
+            height: 40px;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+    }
+    .buton-save {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+            width: 200px;
+            height: 35px;
+            border-radius: 20px;
+        }
+    }
+}
