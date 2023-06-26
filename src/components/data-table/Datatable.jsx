@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { Button, Modal, Table } from "react-bootstrap"
+import { Modal, Table } from "react-bootstrap"
 import './datatablestyle.css'
-import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
 import axios from "axios"
 
 function Datatable() {
@@ -23,7 +21,7 @@ function Datatable() {
     fetchData();
   }, []);
 
-  const [selectedDate, setSelectedDate] = useState(null);
+
   const [nama, setNama] = useState('');
   const [hargabeli, setHargabeli] = useState('');
   
@@ -81,7 +79,6 @@ function Datatable() {
     }
 
     // Reset form setelah submit
-    setSelectedDate(null);
     setNama('');
     setHargabeli('');
     setHargajual('');
@@ -93,7 +90,6 @@ function Datatable() {
 
   const handleEdit = (index) => {
     const selectedData = data[index];
-    setSelectedDate(new Date(selectedData.tanggal));
     setNama(selectedData.nama);
     setHargabeli(selectedData.hargabeli);
     setHargajual(selectedData.hargajual);
@@ -115,7 +111,6 @@ function Datatable() {
 
   const handleCancel = () => {
     setEditIndex(-1);
-    setSelectedDate(null);
     setNama('');
     setHargabeli('');
     setHargajual('');
@@ -125,13 +120,7 @@ function Datatable() {
   };
 
   const [showModal, setShowModal] = useState(false);
-
-  const formatDate = (date) => {
-    const options = { day: 'numeric', month: 'long', year: 'numeric' };
-    const formattedDate = new Date(date).toLocaleDateString('id-ID', options);
-    return formattedDate;
-  };
-
+  
   return (
     <>
     <div className="content">

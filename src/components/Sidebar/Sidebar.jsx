@@ -23,7 +23,6 @@ function Sidebar() {
     }
   };
 
-  const [open, setOpen] = useState(false);
   const navLinkStyles = ({isActive}) => {
     return{
       fontWeight: isActive ? 'bold' : 'normal',
