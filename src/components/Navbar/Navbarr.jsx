@@ -20,7 +20,6 @@ function Navbarr() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item as={Link} to="/profile">Profile</Dropdown.Item>
                 <Dropdown.Item as={Link} to="/login">Logout</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

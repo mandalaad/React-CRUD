@@ -6,6 +6,13 @@
       "hargabeli": "20000",
       "stok": "30",
       "id": 2
+    },
+    {
+      "nama": "aa",
+      "hargajual": "222",
+      "hargabeli": "22222222",
+      "stok": "222",
+      "id": 3
     }
   ]
 }

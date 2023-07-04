@@ -1,6 +1,7 @@
 {
     "name": "react-crud",
     "version": "0.1.0",
+    "homepage": "https://mandalaad.github.io/react-crud-mandala",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",
@@ -9,6 +10,8 @@
         "axios": "^1.4.0",
         "bootstrap": "^5.3.0",
         "boxicons": "^2.1.4",
+        "gh-pages": "^5.0.0",
+
         "json-server": "^0.17.3",
         "jspdf": "^2.5.1",
         "jspdf-autotable": "^3.5.29",
@@ -28,7 +31,9 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "server": "json-server -w database/database.json -p 3001"
+        "server": "json-server -w database/database.json -p 3001",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [

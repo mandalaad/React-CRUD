@@ -7,6 +7,7 @@ import DataTable from './pages/DataTable/DataTable';
 function App() {
   return (
    <Routes>
+    <Route path='/' Component={Input}/>
     <Route path='/input' Component={Input}/>
     <Route path='/data' Component={DataTable}/>
    </Routes>
