@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-crud-mandala/static/css/main.c729e571.css",
-    "main.js": "/react-crud-mandala/static/js/main.507ad68e.js",
-    "static/js/787.45bb5bd2.chunk.js": "/react-crud-mandala/static/js/787.45bb5bd2.chunk.js",
-    "static/media/logo.svg": "/react-crud-mandala/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/react-crud-mandala/index.html",
-    "main.c729e571.css.map": "/react-crud-mandala/static/css/main.c729e571.css.map",
-    "main.507ad68e.js.map": "/react-crud-mandala/static/js/main.507ad68e.js.map",
-    "787.45bb5bd2.chunk.js.map": "/react-crud-mandala/static/js/787.45bb5bd2.chunk.js.map"
+    "main.css": "/react-crud/static/css/main.c729e571.css",
+    "main.js": "/react-crud/static/js/main.37b50a4e.js",
+    "static/js/787.45bb5bd2.chunk.js": "/react-crud/static/js/787.45bb5bd2.chunk.js",
+    "static/media/logo.svg": "/react-crud/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/react-crud/index.html",
+    "main.c729e571.css.map": "/react-crud/static/css/main.c729e571.css.map",
+    "main.37b50a4e.js.map": "/react-crud/static/js/main.37b50a4e.js.map",
+    "787.45bb5bd2.chunk.js.map": "/react-crud/static/js/787.45bb5bd2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c729e571.css",
-    "static/js/main.507ad68e.js"
+    "static/js/main.37b50a4e.js"
   ]
 }
