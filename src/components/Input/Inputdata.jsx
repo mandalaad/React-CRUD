@@ -50,7 +50,7 @@ function Inputdata() {
       if (!isDataSubmitted) {
         setIsSubmitting(true);
       try {
-        await axios.post('http://localhost:3001/data', data);
+        await axios.post('https://648805000e2469c038fcc87f.mockapi.io/historypemasukanadmin/api/v1/inputan', data);
         setModalMessage('Data berhasil ditambahkan ke database.');
         setShowModal(true);
 

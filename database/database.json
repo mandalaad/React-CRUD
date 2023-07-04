@@ -1,18 +1,13 @@
 {
   "data": [
     {
-      "nama": "mandala",
-      "hargajual": "50000",
+      "tanggal": "7/5/2023",
+      "nama": "gelas",
       "hargabeli": "20000",
-      "stok": "30",
-      "id": 2
-    },
-    {
-      "nama": "aa",
-      "hargajual": "222",
-      "hargabeli": "22222222",
-      "stok": "222",
-      "id": 3
+      "hargajual": "30000",
+      "stok": "20",
+      "status": "",
+      "id": 1
     }
   ]
 }

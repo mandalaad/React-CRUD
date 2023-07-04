@@ -11,7 +11,7 @@ function Datatable() {
     // Fungsi untuk mendapatkan data dari API
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/data');
+        const response = await axios.get('https://648805000e2469c038fcc87f.mockapi.io/historypemasukanadmin/api/v1/inputan');
         setData(response.data);
       } catch (error) {
         console.log(error);
@@ -37,7 +37,7 @@ function Datatable() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/data');
+      const response = await axios.get('https://648805000e2469c038fcc87f.mockapi.io/historypemasukanadmin/api/v1/inputan');
       setData(response.data);
     } catch (error) {
       console.error('Gagal mendapatkan data dari server:', error);
@@ -60,7 +60,7 @@ function Datatable() {
     if (editIndex !== -1) {
       // Jika sedang dalam mode edit
       try {
-        await axios.put(`http://localhost:3001/data/${data[editIndex].id}`, newData);
+        await axios.put(`https://648805000e2469c038fcc87f.mockapi.io/historypemasukanadmin/api/v1/inputan/${data[editIndex].id}`, newData);
         setAlertMessage('Data berhasil diperbarui.');
         setEditIndex(-1);
       } catch (error) {
@@ -70,7 +70,7 @@ function Datatable() {
     } else {
       // Jika sedang dalam mode tambah data baru
       try {
-        await axios.post('http://localhost:3001/data', newData);
+        await axios.post('https://648805000e2469c038fcc87f.mockapi.io/historypemasukanadmin/api/v1/inputan', newData);
         setAlertMessage('Data berhasil disimpan.');
       } catch (error) {
         console.error('Gagal menyimpan data di server:', error);
@@ -100,7 +100,7 @@ function Datatable() {
 
   const handleDelete = async (index) => {
     try {
-      await axios.delete(`http://localhost:3001/data/${data[index].id}`);
+      await axios.delete(`https://648805000e2469c038fcc87f.mockapi.io/historypemasukanadmin/api/v1/inputan/${data[index].id}`);
       setAlertMessage('Data berhasil dihapus.');
       fetchData(); // Memperbarui data setelah penghapusan
     } catch (error) {
