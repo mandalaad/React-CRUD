@@ -144,7 +144,7 @@ function Inputdata() {
                     <button type='submit' disabled={isSubmitting || isDataSubmitted}>Submit</button>
                 </div>
             </form>
-            {isDataSubmitted && <p>Anda telah berhasil mengirimkan data. Mohon tunggu selama 10 menit sebelum mengirimkan lagi.</p>}
+            {isDataSubmitted && <p>Anda telah berhasil mengirimkan data. Mohon tunggu selama 10 menit sebelum mengirimkan data kembali.</p>}
             
             <Modal show={showModal} onHide={closeModal}
               centered
