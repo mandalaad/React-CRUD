@@ -146,7 +146,7 @@ function Inputdata() {
                     {isSubmitting ? 'Submitting...' : ''}
                 </div>
             </form>
-            {isDataSubmitted && <p style={{color:"red"}}>Anda telah berhasil mengirimkan data. Mohon tunggu selama 10 detik sebelum mengirimkan data kembali.</p>}
+            {isDataSubmitted && <p style={{color:"red"}}>Anda telah berhasil mengirimkan data. Mohon tunggu selama 10 detik sebelum mengirimkan data kembali yaa...:D.</p>}
             
             <Modal show={showModal} onHide={closeModal}
               centered
