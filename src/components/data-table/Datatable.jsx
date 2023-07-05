@@ -63,20 +63,22 @@ function Datatable() {
         await axios.put(`https://648805000e2469c038fcc87f.mockapi.io/historypemasukanadmin/api/v1/inputan/${data[editIndex].id}`, newData);
         setAlertMessage('Data berhasil diperbarui.');
         setEditIndex(-1);
+        setShowModal(false);
       } catch (error) {
         console.error('Gagal memperbarui data di server:', error);
         setAlertMessage('Gagal memperbarui data.');
       }
-    } else {
-      // Jika sedang dalam mode tambah data baru
-      try {
-        await axios.post('https://648805000e2469c038fcc87f.mockapi.io/historypemasukanadmin/api/v1/inputan', newData);
-        setAlertMessage('Data berhasil disimpan.');
-      } catch (error) {
-        console.error('Gagal menyimpan data di server:', error);
-        setAlertMessage('Gagal menyimpan data.');
-      }
-    }
+    } 
+    // else {
+    //   // Jika sedang dalam mode tambah data baru
+    //   try {
+    //     await axios.post('https://648805000e2469c038fcc87f.mockapi.io/historypemasukanadmin/api/v1/inputan', newData);
+    //     setAlertMessage('Data berhasil disimpan.');
+    //   } catch (error) {
+    //     console.error('Gagal menyimpan data di server:', error);
+    //     setAlertMessage('Gagal menyimpan data.');
+    //   }
+    // }
 
     // Reset form setelah submit
     setNama('');
@@ -96,6 +98,7 @@ function Datatable() {
     setStok(selectedData.stok);
     setStatus(selectedData.status);
     setEditIndex(index);
+    setShowModal(true);
   };
 
   const handleDelete = async (index) => {
@@ -117,6 +120,7 @@ function Datatable() {
     setStok('');
     setStatus('');
     setAlertMessage('');
+    setShowModal(false);
   };
 
   const [showModal, setShowModal] = useState(false);
@@ -130,7 +134,7 @@ function Datatable() {
                 <div className="content1 mt-4">
                 {alertMessage && <div>{alertMessage}</div>}
                     <div className="buton">
-                    <button onClick={() => setShowModal(true)}>Masukan Data</button>
+                    {/* <button onClick={() => setShowModal(true)}>Masukan Data</button> */}
                     </div>
                     {/* <Button variant="primary" onClick={generateFakeData}>
                     Generate Fake Data
@@ -143,7 +147,7 @@ function Datatable() {
                     centered
                     >
                     <Modal.Header closeButton>
-                        <Modal.Title id="contained-modal-title-vcenter">{editIndex !== -1 ? 'Edit Data' : 'Tambah Data'}</Modal.Title>
+                        <Modal.Title id="contained-modal-title-vcenter">Edit Data</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                     <form onSubmit={handleSubmit}>
@@ -192,17 +196,9 @@ function Datatable() {
                         value={stok} onChange={e => setStok(e.target.value)}
                         />
                         </div>
-                        {/* <div className="field">
-                        <p>Status</p>
-                        <input
-                        type="text"
-                        placeholder="Status"
-                        value={status} onChange={e => setStatus(e.target.value)}
-                        />
-                        </div> */}
                         <div className="buton-save">
                     <button type="submit">
-                        {editIndex !== -1 ? 'Perbarui' : 'Simpan'}
+                        {editIndex !== -1}Perbarui
                     </button>
                     {editIndex !== -1 && (
                         <button onClick={handleCancel}>
