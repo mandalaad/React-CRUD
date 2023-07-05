@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './inputstyle.css'
 import axios from 'axios';
 import { Button, Modal, ToastContainer } from 'react-bootstrap';
+import { red } from '@mui/material/colors';
 function Inputdata() {
     // input file
     const [selectedFile, setSelectedFile] = useState(null);
@@ -65,7 +66,7 @@ function Inputdata() {
 
         setTimeout(() => {
           setIsDataSubmitted(false);
-        }, 0 * 60 * 1000); // Jeda 10 menit (10 * 60 * 1000 ms)
+        }, 10 * 1000); // Jeda 10 menit (10 * 60 * 1000 ms)
         // Setelah data berhasil ditambahkan ke database, lakukan penanganan sesuai kebutuhan (misalnya notifikasi, refresh data, dll)
 
         // Mengambil data terbaru setelah ditambahkan
@@ -142,9 +143,10 @@ function Inputdata() {
 
                 <div className="button">
                     <button type='submit' disabled={isSubmitting || isDataSubmitted}>Submit</button>
+                    {isSubmitting ? 'Submitting...' : ''}
                 </div>
             </form>
-            {isDataSubmitted && <p>Anda telah berhasil mengirimkan data. Mohon tunggu selama 10 menit sebelum mengirimkan data kembali.</p>}
+            {isDataSubmitted && <p style={{color:"red"}}>Anda telah berhasil mengirimkan data. Mohon tunggu selama 10 detik sebelum mengirimkan data kembali.</p>}
             
             <Modal show={showModal} onHide={closeModal}
               centered
