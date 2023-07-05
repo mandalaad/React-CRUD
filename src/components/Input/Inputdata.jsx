@@ -129,6 +129,7 @@ function Inputdata() {
                 <div className="field">
                     <p>Foto Barang</p>
                     <input 
+                    className='foto'
                     type="file" 
                     name='file'
                     onChange={handleFileChange} />
