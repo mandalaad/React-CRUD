@@ -215,7 +215,7 @@ function Datatable() {
                     </Modal>
                 </div>
                 <div className="table-responsive">
-                    <Table className="table table-bordered" id="dataTable" width="100%" cellspacing="0" >
+                    <Table hover className="table table-bordered" id="dataTable" width="100%" cellspacing="0" >
                         <thead>
                             <tr>
                             <th>No</th>
