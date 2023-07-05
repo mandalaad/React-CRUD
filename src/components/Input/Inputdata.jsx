@@ -91,7 +91,8 @@ function Inputdata() {
                     <p>Nama Barang</p>
                     <input 
                     name='name'
-                    value={nama} onChange={e => setNama(e.target.value)}
+                    value={nama} 
+                    onChange={e => setNama(e.target.value)}
                     type="text" 
                     required
                     />
@@ -100,7 +101,9 @@ function Inputdata() {
                     <p>Harga Beli</p>
                     <input 
                     name="hargabeli"
-                    type="number" value={hargabeli}
+                    type="number" 
+                    value={hargabeli}
+                    min={0}
                     onChange={e => setHargabeli(e.target.value)}
                     required
                     />
@@ -110,6 +113,7 @@ function Inputdata() {
                     <input 
                     type="number" 
                     name="hargajual"
+                    min={0}
                     value={hargajual}
                     onChange={e => setHargajual(e.target.value)}
                     required
@@ -120,6 +124,7 @@ function Inputdata() {
                     <input 
                     type="number" 
                     name="stok"
+                    min={0}
                     value={stok}
                     onChange={e => setStok(e.target.value)}
                     required
